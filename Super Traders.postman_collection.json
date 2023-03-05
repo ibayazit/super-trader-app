@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "f63a651b-3d56-4667-a85d-7e1eef3d4efa",
+		"name": "Super Traders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/users/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "Ali",
+									"type": "default"
+								},
+								{
+									"key": "lastName",
+									"value": "Veli",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "ali@example.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "Ali updated",
+									"type": "default"
+								},
+								{
+									"key": "lastName",
+									"value": "Veli updated",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "ali@example.com",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/users/6",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/users/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shares",
+			"item": [
+				{
+					"name": "Get Shares",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}/shares",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"shares"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Share",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/shares/FOS",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"shares",
+								"FOS"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Share",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "ABC",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "Hello World",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "1.00",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "5",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/shares",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"shares"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Share",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Hello World Updated",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "12.34",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "500",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/shares/FOs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"shares",
+								"FOs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Share",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/shares/ABD",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"shares",
+								"ABD"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trade",
+			"item": [
+				{
+					"name": "Get Portfolio",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trade/portfolio/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trade",
+								"portfolio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Share",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "TAV",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "4",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/trade/buy/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trade",
+								"buy",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sell Share",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "TAV",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "199999",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/trade/sell/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trade",
+								"sell",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000/api/v1",
+			"type": "default"
+		}
+	]
+}

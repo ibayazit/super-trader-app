@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  traderapp:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    depends_on:
+      - database
+    environment:
+      NODE_ENV: production
+      APP_ENV: production
+      APP_PORT: 3000
+      DATABASE_DIALECT: postgres
+      DATABASE_HOST: database
+      DATABASE_PORT: 5432
+      DATABASE_NAME: super_traders
+      DATABASE_USER: root
+      DATABASE_PASSWORD: 12345678
+    command: bash -c "node index.js"
+    ports:
+    - "3000:3000"
+    networks:
+      - tradenet
+
+  database:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: super_traders
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - tradenet
+
+networks:
+  tradenet:
+    driver: bridge
+
+volumes:
+  db:
